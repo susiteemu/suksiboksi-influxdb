@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  influxdb:
+    container_name: influxdb
+    image: influxdb:1.8.4
+    restart: unless-stopped
+    ports:
+      - 8086:8086
+    environment:
+      INFLUXDB_REPORTING_DISABLED: true
+    volumes:
+      - influxdb-data:/var/lib/influxdb
+
+volumes:
+  influxdb-data:
+
+networks:
+  default:
+    external:
+      name: ${DOCKER_NETWORK}

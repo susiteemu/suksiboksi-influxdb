@@ -1,2 +1,3 @@
-# suksiboksi-influxdb
-InfluxDB in a docker for my suksiboksi server setup
+# InfluxDB in a docker
+
+This repository contains setupping InfluxDB in a docker. This is part of my suksiboksi server setup.
